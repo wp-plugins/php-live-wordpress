@@ -2,10 +2,10 @@
 	/*
 	Plugin Name: PHP Live!
 	Plugin URI: http://www.phplivesupport.com
-	Description: Open Source Live Support Software powered by PHP and MySQL.  Live chat support software Download or On Demand.
+	Description: PHP Live! enables live help and live customer support chat communication on your website.
 	Author: osicodesinc
 	Author URI: http://www.osicodesinc.com
-	Version: 1.0
+	Version: 0.9.1
 	*/
 
 	/* (c) OSI Codes Inc. */

@@ -5,7 +5,7 @@ Stable tag: 0.9
 Requires at least: 2.7
 Tested up to: 3.3.1
 
-PHP Live! for WordPress integration.  Chat with your website visitors using any web browser.
+PHP Live! for WordPress integration.  Chat with your website visitors using just a web browser.
 
 == Description ==
 
