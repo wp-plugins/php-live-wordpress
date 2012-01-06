@@ -5,7 +5,7 @@ Stable tag: 0.9
 Requires at least: 2.7
 Tested up to: 3.3.1
 
-PHP Live! for WordPress integration.  Chat with your website visitors using just a web browser.
+PHP Live! for WordPress integration.
 
 == Description ==
 
@@ -18,17 +18,17 @@ Deploying a live chat solution for your website is a cost affective communicatio
 
 ***100% Web Browser Based***
 
-PHP Live! 100% web browser based with no additional software installation required.  Your website visitors will be able to chat with you instantly using any major web browser, including mobile devices.
+PHP Live! is 100% web browser based with no additional software installation required.  Your website visitors will be able to chat with you instantly using any major web browser, including mobile devices.
 
 ***Unlimited Departments***
 
-Create unlimited number of departments: "Customer Support", "Sales Chat", etc.  A single operator can be assigned to multiple departments.
+Assign an operator to unlimited number of departments.  Some examples of departments you can create are "Customer Support", "Sales", "General Inquiries" and more.
 
 ***Real-time Visitor Traffic Monitor with GeoIP***
 
 View visitors that are on your website in real-time.  See their footprint activity, their GeoIP location and other various data that may be helpful to streamline visitor chat assistance.
 
-***More Than Just a Chat Software***
+***More Than a Chat Software***
 
 PHP Live! includes various reporting and tools that are bundled with the software.  Track your ad click rates, enhance awareness with chat footer marquees, track overall visitor footprint data, view daily chat request trends and much more.
 
@@ -49,7 +49,7 @@ http://www.phplivesupport.com/screencasts.php
 
 = Q =
 
-Answer
+We are still adding to this area.  For now, please submit plugin questions to tech@osicodesinc.com - thank you.
 
 = Q  =
 
@@ -70,4 +70,7 @@ Answer
 
 = 0.9.1 =
 * Updated readme and file paths
+
+= 0.9.2 =
+* Updated various texts
 
