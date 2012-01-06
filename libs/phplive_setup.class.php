@@ -91,7 +91,7 @@
 			}
 			else
 			{
-				$iframe_url = "../wp-content/plugins/phplive-wp/phplive_wp.php?name=$name&email=$email" ;
+				$iframe_url = "../wp-content/plugins/php-live-wordpress/phplive_wp.php?name=$name&email=$email" ;
 				$wp_output .= '<div class="phplive_wp_info_box"><img src="'.$this->fetch_phplive_wp_plugin_path().'/pics/flag_red.gif" width="16" height="16" border="0"> Create an account or provide your existing PHP Live! system URL.</div>' ;
 			}
 			$wp_output .= '<div id="phplive_setup_body_wrapper" style="text-align: justify;"><div id="phplive_setup_body_iframe"><iframe id="iframe_phplive_url" src="'.$iframe_url.'" style="width: 100%; height: 200px; border: 0px;'.$plugin_setup_showhide.'"></iframe>'.$iframe_phplive_url_setup.'</div><div id="phplive_setup_body_start">'.$iframe_phplive_url_start.'</div><div id="phplive_setup_body_html" style="display: none; padding-top: 15px; padding-bottom: 15px;">'.$div_html.'</div><div id="phplive_setup_body_settings" style="display: none; padding-top: 15px; padding-bottom: 15px;">'.$div_settings.'</div><div id="phplive_setup_body_about" style="display: none;">'.$iframe_phplive_url_about.'</div></div>' ;

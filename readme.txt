@@ -5,7 +5,7 @@ Stable tag: 0.9
 Requires at least: 2.7
 Tested up to: 3.3.1
 
-PHP Live! for WordPress integration.  http://www.phplivesupport.com
+PHP Live! for WordPress integration.  Chat with your website visitors using any web browser.
 
 == Description ==
 
@@ -40,9 +40,9 @@ http://www.phplivesupport.com/screencasts.php
 
 == Installation ==
 
-1. Upload the 'phplive' directory to your Wordpress plugins directory ('/wp-content/plugins/')
-2. Activate the 'phplive' plugin in the "Plugins" admin panel using the "Activate" link.
-3. Click the newly created 'phplive' menu on the left side of the admin panel.
+1. Upload the 'php-live-wordpress' directory to your Wordpress plugins directory ('/wp-content/plugins/')
+2. Activate the plugin in the "Plugins" admin panel using the "Activate" link.
+3. Click the newly created 'PHP Live!' menu on the left side of the admin panel.
 4. Proceed with the steps detailed on the PHP Live! plugins page.
 
 == Frequently Asked Questions ==
@@ -68,5 +68,6 @@ Answer
 = 0.9 =
 * Beta release.
 
-
+= 0.9.1 =
+* Updated readme and file paths
 

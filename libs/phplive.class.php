@@ -23,7 +23,7 @@
 
 		public function fetch_phplive_wp_plugin_path()
 		{
-			if ( is_null( $this->plugin_path ) ) { $this->plugin_path = WP_PLUGIN_URL.'/phplive-wp/libs' ; }
+			if ( is_null( $this->plugin_path ) ) { $this->plugin_path = WP_PLUGIN_URL.'/php-live-wordpress/libs' ; }
 			return $this->plugin_path ;
 		}
 
