@@ -1,11 +1,11 @@
 === PHP Live! ===
 Contributors: osicodesinc
 Tags: live chat, live support, live chat software, live support software, online support, php live, chat addon, chat, chat button, live help, livechat, php live support, chat plugin, widget
-Stable tag: 0.9
+Stable tag: 1.0
 Requires at least: 2.7
 Tested up to: 3.3.1
 
-PHP Live! for WordPress integration.
+PHP Live! for WordPress integration.  Chat with your website visitors.
 
 == Description ==
 
@@ -14,7 +14,7 @@ PHP Live! enables live help and live customer support chat communication on your
 
 **About PHP Live!**
 
-Deploying a live chat solution for your website is a cost affective communication tool with measurable results.  In a busy work environment, live chat is very affective multi-tasking solution, allowing both the visitor and the operator to juggle between various tasks while conversing in real-time.
+PHP Live! enables live help and live customer support chat communication on your website.  PHP Live! is simple to integrate and intuitive to operate with vast customization options.
 
 ***100% Web Browser Based***
 
@@ -72,5 +72,8 @@ Answer
 * Updated readme and file paths
 
 = 0.9.2 =
+* Updated various texts
+
+= 0.9.3 =
 * Updated various texts
 
