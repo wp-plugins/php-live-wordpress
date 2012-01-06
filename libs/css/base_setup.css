@@ -1,0 +1,33 @@
+* { margin: 0; }
+html, body { margin: 0px; background: #FFFFFF; color: #4D4D4D; font-family: Arial; font-size: 12px; }
+
+a:link {color: #7C89A9; }
+a:active {color: #7C89A9; }
+a:visited {color: #7C89A9; }
+a:hover {color: #7C89A9; }
+.nounder{ text-decoration: none; cursor: pointer; }
+
+.op_submenu_wrapper{ margin-top: 25px; }
+.op_submenu, .op_submenu_focus{ position: relative; float: left; bottom: -2px; padding: 5px; margin-left: 5px; font-weight: bold; }
+.op_submenu{ background: #99A6C6; color: #FAFAFA; border-left: 1px solid #A2AFCF; border-top: 1px solid #A2AFCF; border-right: 1px solid #A2AFCF; cursor: pointer; }
+.op_submenu_focus{ bottom: -3px; color: #545D72; border-top: 1px solid #D6D6D6; border-left: 1px solid #D6D6D6; border-right: 1px solid #D6D6D6; border-bottom: transparent; }
+
+.info_box{ background: #FBF7B4; border: 1px solid #FFE221; padding: 5px; color: #806732; }
+.info_error{ background: #F67975; border: 1px solid #BA3D40; padding: 5px; color: #FFFFFF; }
+.info_good{ background: #43CB00; border: 1px solid #36A400; padding: 5px; color: #FFFFFF; }
+.info_neutral{ background: #FAFAFA; border: 1px solid #D6D6D6; padding: 5px; color: #6D6D71; }
+.info_warning{ background: #FFE8C4; border: 1px solid #E1CDAD; padding: 5px; color: #5A5245; }
+.info_clear{ border: 1px solid transparent; padding: 5px; }
+.info_info{ background: url( ../pics/bg_glass.gif ) repeat-x #F2F2F2; padding: 20px; border: 1px solid #D6D6D6; color: #6D6D71; }
+.info_info_clear{ padding: 20px; border: 1px solid transparent; }
+
+input[type=text], .input{ border: 1px solid #ABADB5; padding: 3px; }
+select{ border: 1px solid #ABADB5; padding: 3px; }
+textarea{ border: 1px solid #ABADB5; padding: 3px; }
+.select_calendar{ padding: 2px; background: #BBEFFF; border: 1px solid #97C1CE; color: #3E5055; }
+
+.info_box, .info_error, .info_good, .info_warning, .info_neutral, .info_info, select, textarea, input[type=text], .input{ -moz-border-radius: 5px; border-radius: 5px; }
+.op_submenu, .op_submenu_focus, .op_menu, .op_menu_hover, .op_menu_focus{ border-top-left-radius: 5px 5px; -moz-border-radius-topleft: 5px 5px; border-top-right-radius: 5px 5px; -moz-border-radius-topright: 5px 5px; }
+
+#btn_login, .btn_login{ padding: 5px; min-width: 160px; }
+
