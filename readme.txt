@@ -5,7 +5,7 @@ Stable tag: 1.0
 Requires at least: 2.7
 Tested up to: 3.3.1
 
-PHP Live! for WordPress integration.  Chat with your website visitors.
+Chat with your website visitors.
 
 == Description ==
 
@@ -28,14 +28,6 @@ Assign an operator to unlimited number of departments.  Some examples of departm
 
 View visitors that are on your website in real-time.  See their footprint activity, their GeoIP location and other various data that may be helpful to streamline visitor chat assistance.
 
-***More Than a Chat Software***
-
-PHP Live! includes various reporting and tools that are bundled with the software.  Track your ad click rates, enhance awareness with chat footer marquees, track overall visitor footprint data, view daily chat request trends and much more.
-
-
-Check out the video demos and screencasts at:
-
-http://www.phplivesupport.com/screencasts.php
 
 
 == Installation ==
@@ -44,16 +36,6 @@ http://www.phplivesupport.com/screencasts.php
 2. Activate the plugin in the "Plugins" admin panel using the "Activate" link.
 3. Click the newly created 'PHP Live!' menu on the left side of the admin panel.
 4. Proceed with the steps detailed on the PHP Live! plugins page.
-
-== Frequently Asked Questions ==
-
-= Q =
-
-We are still adding to this area.  For now, please submit plugin questions to tech@osicodesinc.com - thank you.
-
-= Q  =
-
-Answer
 
 
 == Screenshots ==
@@ -65,15 +47,18 @@ Answer
 
 == Changelog ==
 
-= 0.9 =
-* Beta release.
+= 1.0 =
+* Stable version 1.0
 
-= 0.9.1 =
-* Updated readme and file paths
+= 0.9.3 =
+* Updated various texts
 
 = 0.9.2 =
 * Updated various texts
 
-= 0.9.3 =
-* Updated various texts
+= 0.9.1 =
+* Updated readme and file paths
+
+= 0.9 =
+* Beta release.
 
