@@ -5,7 +5,7 @@
 	Description: PHP Live! enables live help and live customer support chat communication on your website.
 	Author: osicodesinc
 	Author URI: http://www.osicodesinc.com
-	Version: 1.0
+	Version: 1.1
 	*/
 
 	/* (c) OSI Codes Inc. */

@@ -3,7 +3,7 @@
 	/* http://www.osicodesinc.com */
 	/* Dev team: 615 */
 	error_reporting(0) ;
-	$version = 1.0 ;
+	$version = 1.1 ;
 	include_once( "./API/Util_Format.php" ) ;
 
 	$action = Util_Format_Sanatize( Util_Format_GetVar( "action" ), "ln" ) ;
@@ -23,7 +23,7 @@
 			if ( preg_match( "/(https:\/\/)/i", $phplive_url ) )
 			{
 				$phplive_url_encoded = urlencode( $phplive_url ) ;
-				// http://10.0.0.2/osicodes/website2/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded
+				// http://10.0.0.5/osicodes/website2/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded
 				$tags = get_meta_tags( "http://www.phplivesupport.com/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded" ) ;
 			}
 			else
@@ -66,7 +66,7 @@
 			$json_data = "json_data = { \"status\": 0, \"error\": \"Email format is invalid. (example: someone@somewhere.com)\" };" ;
 		else
 		{
-			// http://10.0.0.2/osicodes/website2/phplive_wp.php?action=create&name=$name&email=$email&login=$login&password=$password&loc=$loc&$now
+			// http://10.0.0.5/osicodes/website2/phplive_wp.php?action=create&name=$name&email=$email&login=$login&password=$password&loc=$loc&$now
 			$tags = get_meta_tags( "http://www.phplivesupport.com/phplive_wp.php?action=create&name=$name&email=$email&login=$login&$now" ) ;
 			$description = isset( $tags["description"] ) ? $tags["description"] : "Invalid server data.,,," ;
 			LIST( $error, $trial, $login ) = explode( ",", $description ) ;
@@ -80,6 +80,14 @@
 		print $json_data ;
 		exit ;
 	}
+
+	// check for file access
+	$php_version = phpversion() ;
+	$ini_safe_mode = ini_get("safe_mode") ;
+	$php_safe_mode = preg_match( "/on/i", $ini_safe_mode ) ? 1 : 0 ;
+	$php_fopen = ini_get( "allow_url_fopen" ) ;
+	$php_agent = isset( $_SERVER["HTTP_USER_AGENT"] ) ? $_SERVER["HTTP_USER_AGENT"] : "-" ;
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <head>
@@ -126,7 +134,7 @@
 
 	function show_div( thediv )
 	{
-		var divs = Array( "trial", "url", "about" ) ;
+		var divs = Array( "trial", "url", "about", "server" ) ;
 		for ( c = 0; c < divs.length; ++c )
 		{
 			$('#account_'+divs[c]).hide() ;
@@ -218,6 +226,7 @@
 			<div class="op_submenu" onClick="show_div('trial')" id="menu_trial">Create an Account</div>
 			<div class="op_submenu" onClick="show_div('url')" id="menu_url">I Already Have a PHP Live! URL</div>
 			<div class="op_submenu" onClick="show_div('about')" id="menu_about">About PHP Live!</div>
+			<div class="op_submenu" onClick="show_div('server')" id="menu_server">Server Info</div>
 			<div style="clear: both"></div>
 		</div>
 
@@ -239,13 +248,13 @@
 				<td> <input type="text" class="input" name="password" id="password" size="30" maxlength="35" value="password will be emailed to you" onKeyPress="return noquotes(event)" onKeyup="input_text_listen(event);" disabled></td>
 			</tr>
 			<tr>
-				<td colspan=2><div style="font-size: 10px;">please provide letters and numbers only for the login field</div></td>
+				<td colspan=2><div style="font-size: 10px;">please provide letters and numbers only for the login</div></td>
 			</tr>
 			<tr>
 				<td></td><td colspan=3><div style="margin-top: 10px;"><input type="button" id="btn_trial" class="btn_login" value="Create Trial Account" onClick="do_create()"></div></td>
 			</tr>
 			<tr>
-				<td></td><td colspan=3><div style="padding-top: 25px;"><img src="./libs/pics/info.png" width="16" height="16" border="0" alt=""> <a href="http://www.phplivesupport.com/faq.php" target="snew">Frequently Asked Question and Answers (FAQ)</a></div></td>
+				<td></td><td colspan=3><div style="padding-top: 25px;"><img src="./libs/pics/info.png" width="16" height="16" border="0" alt=""> <a href="http://www.phplivesupport.com/help_desk.php" target="snew">Frequently Asked Question and Answers (FAQ)</a></div></td>
 			</tr>
 			</table>
 		</div>
@@ -271,7 +280,7 @@
 				
 				<div style="margin-top: 15px;"><img src="./libs/pics/screen_themes.gif" width="753" height="145" border="0" alt=""></div>
 				
-				<div style='margin-top: 15px;'>
+				<div style='margin-top: 25px;'>
 					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/?&plk=pi-13-9kt-m" target="new">PHP Live! Home</a>
 					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/features.php?&plk=pi-13-9kt-m" target="new">Features</a>
 					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/screencasts.php?&plk=pi-13-9kt-m" target="new">Screencasts</a>
@@ -281,9 +290,32 @@
 				</div>
 			</div>
 		</div>
+		<div id="account_server" style="display: none;">
+			<div style="margin-top: 15px; margin-bottom: 25px;">
+				<ul>
+					<li> PHP Version: <?php echo $php_version ?>
+					<li> Safe Mode: <?php echo $php_safe_mode ?>
+					<li> Allow URL open: <?php echo $php_fopen ?>
+					<li> User Agent: <?php echo $php_agent ?>
+				</ul>
+
+				<?php if ( !$php_fopen ): ?>
+				<div class="info_error" style="margin-top: 25px;">
+					"allow_url_fopen" is disabled on your server.  In order for the PHP Live! plugin to work properly, this value should be on.  Here is what you'll want to do:
+					<ol>
+						<li> locate the <b>php.ini</b> file on your web server and find the line that contains <code>allow_url_fopen</code>
+						<li> turn on the value so it now reads <code>allow_url_fopen = On</code>
+						<li> save the file and restart your web server
+					</ol>
+				</div>
+				<?php endif ; ?>
+
+				<div style="margin-top: 25px;">PHP Live! plugin not working?  Please contact <a href="mailto:tech@osicodesinc.com">tech@osicodesinc.com</a> and include the above values for review and we will reply back with possible solutions.</div>
+			</div>
+		</div>
 		</form>
 	
-		<div style="text-align: right;"><img src="./libs/pics/agent.png" width="16" height="16" border=0> <span style="color: #99A6C6; text-decoration: underline;"><!-- BEGIN PHP Live! code, (c) OSI Codes Inc. --><span id="phplive_btn_1325306861" onClick="phplive_launch_chat_0(0)" style="cursor: pointer;"></span><script type="text/javascript" src="https://www.osicodesinc.com/apps/phplive/js/phplive_v2.js.php?q=0|1325306861|2|Live%20Chat%20Assistance"></script><!-- END PHP Live! code, (c) OSI Codes Inc. --></span></div>
+		<div style="text-align: right;"><img src="./libs/pics/agent.png" width="16" height="16" border=0> <span style="color: #99A6C6; text-decoration: underline;"><!-- BEGIN PHP Live! code, (c) OSI Codes Inc. --><span id="phplive_btn_1328742422" onClick="phplive_launch_chat_0(0)" style="color: #99A6C6; text-decoration: underline; cursor: pointer;"></span><script type="text/javascript">(function() { var phplive_e_1328742422 = document.createElement("script") ; phplive_e_1328742422.type = "text/javascript" ; phplive_e_1328742422.async = true ; phplive_e_1328742422.src = "https://www.osicodesinc.com/apps/phplive/js/phplive_v2.js.php?q=0|1328742422|2|Click%20for%20Live%20Support" ; document.body.appendChild( phplive_e_1328742422 ) ; })() ;</script><!-- END PHP Live! code, (c) OSI Codes Inc. --></span></div>
 	</div>
 </div>
 
