@@ -3,7 +3,7 @@
 	/* http://www.osicodesinc.com */
 	/* Dev team: 615 */
 	error_reporting(0) ;
-	$version = 1.3 ;
+	$version = 1.4 ;
 	include_once( "./API/Util_Format.php" ) ;
 
 	$action = Util_Format_Sanatize( Util_Format_GetVar( "action" ), "ln" ) ;
@@ -297,7 +297,7 @@
 				<div style='margin-top: 25px;'>
 					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/?&plk=pi-13-9kt-m" target="new">PHP Live! Home</a>
 					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/features.php?&plk=pi-13-9kt-m" target="new">Features</a>
-					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/purchase.php?&plk=pi-13-9kt-m" target="new">Package Selections</a>
+					<img src="./libs/pics/main_grey.png" width="20" height="10" border="0" alt=""><a href="http://www.phplivesupport.com/pricing.php?&plk=pi-13-9kt-m" target="new">Package Selections</a>
 				</div>
 
 				</div>
