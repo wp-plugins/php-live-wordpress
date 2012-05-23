@@ -3,7 +3,7 @@
 	/* http://www.osicodesinc.com */
 	/* Dev team: 615 */
 	error_reporting(0) ;
-	$version = 1.2 ;
+	$version = 1.3 ;
 	include_once( "./API/Util_Format.php" ) ;
 
 	$action = Util_Format_Sanatize( Util_Format_GetVar( "action" ), "ln" ) ;
@@ -20,14 +20,9 @@
 
 		if ( preg_match( "/(http:\/\/)|(https:\/\/)/i", $phplive_url ) )
 		{
-			if ( preg_match( "/(https:\/\/)/i", $phplive_url ) )
-			{
-				$phplive_url_encoded = urlencode( $phplive_url ) ;
-				// http://10.0.0.5/osicodes/website2/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded
-				$tags = get_meta_tags( "http://www.phplivesupport.com/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded" ) ;
-			}
-			else
-				$tags = get_meta_tags( $phplive_url ) ;
+			$phplive_url_encoded = urlencode( $phplive_url ) ;
+			// http://10.0.0.5/osicodes/website2/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded
+			$tags = get_meta_tags( "http://www.phplivesupport.com/phplive_wp.php?action=verify_url&phplive_url=$phplive_url_encoded" ) ;
 
 			$description = isset( $tags["description"] ) ? $tags["description"] : "" ;
 			$author = isset( $tags["author"] ) ? $tags["author"] : "" ;
