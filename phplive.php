@@ -1,11 +1,12 @@
 <?php
 	/*
 	Plugin Name: PHP Live!
-	Plugin URI: http://www.phplivesupport.com
+	Plugin URI: http://wordpress.org/extend/plugins/php-live-wordpress/
 	Description: PHP Live! enables live help and live customer support chat communication on your website.
+	Description: PHP Live! plugin enables PHP Live! integration with your WordPress website.
 	Author: osicodesinc
-	Author URI: http://www.osicodesinc.com
-	Version: 1.4
+	Author URI: http://www.phplivesupport.com
+	Version: 1.5
 	*/
 
 	/* (c) OSI Codes Inc. */

@@ -1,9 +1,9 @@
 === PHP Live! ===
 Contributors: osicodesinc
 Tags: live chat, live support, live chat software, live support software, online support, php live, chat addon, chat, chat button, live help, livechat, php live support, chat plugin, widget
-Stable tag: 1.4
+Stable tag: 1.5
 Requires at least: 2.7
-Tested up to: 3.3.1
+Tested up to: 3.5.1
 
 Chat with your website visitors.
 
@@ -46,6 +46,9 @@ View visitors that are on your website in real-time.  See their footprint activi
 
 
 == Changelog ==
+
+= 1.5 =
+* Simplified the plugin and navigation
 
 = 1.4 =
 * Updated various texts and links

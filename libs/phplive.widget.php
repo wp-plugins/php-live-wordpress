@@ -6,7 +6,7 @@
 	{
 		function phplive_widget()
 		{
-			parent::WP_Widget( 'phplive_widget', 'PHP Live!', array( 'classname' => 'phplive_widget', 'description' => 'Add live chat capability to your WordPress' ) ) ;
+			parent::WP_Widget( 'phplive_widget', 'PHP Live!', array( 'classname' => 'phplive_widget', 'description' => 'Integrate PHP Live! with WordPress' ) ) ;
 		}
 		function form( $instance ){ }
 		function widget( $args, $instance ) { phplive::get_instance()->widget_fetch_phplive_html_code() ; }
