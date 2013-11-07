@@ -1,7 +1,7 @@
 === PHP Live! ===
 Contributors: osicodesinc
 Tags: live chat, live support, live chat software, live support software, online support, php live, chat addon, chat, chat button, live help, livechat, php live support, chat plugin, widget
-Stable tag: 1.6
+Stable tag: 1.7
 Requires at least: 2.7
 Tested up to: 3.5.1
 
@@ -9,22 +9,13 @@ Chat with your website visitors.
 
 == Description ==
 
-------------------------------------------------------------
-This is not a free plugin.  A trial account signup is required.
+This plugin does not include a free live chat account.  An existing trial account, a Download client account or an On Demand client account is required.
 
 http://www.phplivesupport.com/trial.php
-------------------------------------------------------------
-
-PHP Live! enables live help and live customer support chat communication on your website. Integrate an interactive real-time chat capability and provide one-on-one chat assistance to your website visitors. Live chat is rapidly becoming the website standard and because PHP Live! is 100% web based, if you have a web browser, you can provide live chat assistance directly from your website.
-
 
 **About PHP Live!**
 
-PHP Live! enables live help and live customer support chat communication on your website.  PHP Live! is simple to integrate and intuitive to operate with vast customization options.
-
-***100% Web Browser Based***
-
-PHP Live! is 100% web browser based with no additional software installation required.  Your website visitors will be able to chat with you instantly using any major web browser, including mobile devices.
+PHP Live! enables live chat communication with your website visitors.  100% web browser based.  Simply launch a web browser and provide live chat support!  PHP and MySQL powered live chat system.
 
 ***Unlimited Departments***
 
@@ -32,7 +23,7 @@ Assign an operator to unlimited number of departments.  Some examples of departm
 
 ***Real-time Visitor Traffic Monitor with GeoIP***
 
-View visitors that are on your website in real-time.  See their footprint activity, their GeoIP location and other various data that may be helpful to streamline visitor chat assistance.
+View your website traffic in real-time.  GeoIP integration, visitor pageviews, refer URLs and automatic chat invites provide the tools you need for an helpful and streamlined visitor chat experience.
 
 
 
