@@ -6,7 +6,7 @@
 	Description: PHP Live! plugin enables PHP Live! integration with your WordPress website.
 	Author: osicodesinc
 	Author URI: http://www.phplivesupport.com
-	Version: 1.7
+	Version: 1.9
 	*/
 
 	/* (c) OSI Codes Inc. */
